@@ -18,7 +18,7 @@ public class TransmissionClient {
 	
 	public static final class Builder {
 		
-		private String baseUrl;
+		private String baseUrl = "http://localhost:9091/transmission/";
 		private String username;
 		private String password;
 		
