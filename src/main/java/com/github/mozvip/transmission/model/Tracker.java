@@ -1,5 +1,5 @@
 
-package fr.mozvip.transmission.model;
+package com.github.mozvip.transmission.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

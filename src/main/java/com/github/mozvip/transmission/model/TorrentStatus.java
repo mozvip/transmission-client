@@ -1,4 +1,4 @@
-package fr.mozvip.transmission.model;
+package com.github.mozvip.transmission.model;
 
 public enum TorrentStatus {
 	STATUS_0,

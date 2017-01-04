@@ -1,12 +1,13 @@
-package fr.mozvip.transmission;
+package com.github.mozvip.transmission;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
-import fr.mozvip.transmission.model.Torrent;
-import fr.mozvip.transmission.model.TransmissionResponse;
+import com.github.mozvip.transmission.model.Torrent;
+import com.github.mozvip.transmission.model.TransmissionResponse;
+
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

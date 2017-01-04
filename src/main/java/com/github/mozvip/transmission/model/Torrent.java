@@ -1,5 +1,5 @@
 
-package fr.mozvip.transmission.model;
+package com.github.mozvip.transmission.model;
 
 import java.util.List;
 

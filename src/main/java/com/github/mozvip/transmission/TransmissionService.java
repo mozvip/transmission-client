@@ -1,7 +1,8 @@
 
-package fr.mozvip.transmission;
+package com.github.mozvip.transmission;
 
-import fr.mozvip.transmission.model.TransmissionResponse;
+import com.github.mozvip.transmission.model.TransmissionResponse;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;

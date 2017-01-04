@@ -1,4 +1,4 @@
-package fr.mozvip.transmission;
+package com.github.mozvip.transmission;
 
 
 import java.io.IOException;
@@ -12,7 +12,8 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import fr.mozvip.transmission.model.Torrent;
+import com.github.mozvip.transmission.TransmissionClient;
+import com.github.mozvip.transmission.model.Torrent;
 
 public class TransmissionTest {
 	
@@ -32,7 +33,7 @@ public class TransmissionTest {
 	@Test
 	public void testGetTorrents() throws IOException {
 		List<Torrent> torrents = transmission.getTorrents();
-		for (fr.mozvip.transmission.model.Torrent transmissionResponseTorrent : torrents) {
+		for (com.github.mozvip.transmission.model.Torrent transmissionResponseTorrent : torrents) {
 			System.out.println( transmissionResponseTorrent.getName() );
 		}
 	}

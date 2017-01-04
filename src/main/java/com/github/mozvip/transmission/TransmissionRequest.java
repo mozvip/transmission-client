@@ -1,4 +1,4 @@
-package fr.mozvip.transmission;
+package com.github.mozvip.transmission;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
