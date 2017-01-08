@@ -11,8 +11,9 @@ before_install:
   - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust --batch || true
   - sudo apt-get -qq update
   - sudo apt-get install -y transmission-daemon
+  - sudo service transmission-daemon stop
   - sudo cp src/test/resources/settings.json /etc/transmission-daemon/settings.json
-  - sudo service transmission-daemon restart
+  - sudo service transmission-daemon start
 deploy:
   -
     provider: script
