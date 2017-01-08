@@ -4,6 +4,13 @@
 	<groupId>com.github.mozvip</groupId>
 	<artifactId>transmission-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>transmission-client</name>
+	<description>A Java client for the Transmission application</description>
+	<url>https://github.com/mozvip/transmission-client</url>
+	<scm>
+		<url>https://github.com/mozvip/transmission-client.git</url>
+		<developerConnection>Guillaume Serre - guillaume.serre@gmail.com</developerConnection>
+	</scm>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -14,6 +21,21 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
+	<developers>
+		<developer>
+			<id>mozvip</id>
+			<name>Guillaume Serre</name>
+			<email>guillaume.serre@gmail.com</email>
+			<url>https://github.com/mozvip</url>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>Apache-2.0</name>
+			<url>https://opensource.org/licenses/Apache-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<build>
 		<plugins>
 			<plugin>
@@ -34,6 +56,32 @@
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -69,6 +117,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<url>https://github.com/mozvip/transmission-client</url>
-	<name>transmission-client</name>
 </project>
