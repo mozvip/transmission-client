@@ -69,4 +69,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<url>https://github.com/mozvip/transmission-client</url>
+	<name>transmission-client</name>
 </project>
