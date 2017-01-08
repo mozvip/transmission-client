@@ -25,8 +25,8 @@ public class TransmissionTest {
 	public static void init() throws IOException {
 		transmission = TransmissionClient.Builder()
 			.baseUrl("http://localhost:9091/transmission")
-			.username("test")
-			.password("test")
+//			.username("test")
+//			.password("test")
 			.build();
 	}
 
