@@ -11,9 +11,7 @@ before_install:
   - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust --batch || true
   - sudo apt-get -qq update
   - sudo apt-get install -y transmission-daemon
-  - sudo sed 's/"rpc-enabled": false/"rpc-enabled": true/' /etc/transmission-daemon/settings.json
   - sudo cat /etc/transmission-daemon/settings.json
-  - sudo service transmission-daemon restart
 deploy:
   -
     provider: script
