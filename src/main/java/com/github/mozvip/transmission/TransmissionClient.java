@@ -59,10 +59,15 @@ public class TransmissionClient {
 	private String baseUrl;
 	private String username;
 	private String password;
+	private boolean ready;
 
 	private TransmissionService service = null;
 
-	private long extractTorrentId( TransmissionResponse response ) {
+	public boolean isReady() {
+		return ready;
+	}
+
+	private long extractTorrentId(TransmissionResponse response ) {
 		if (response.getArguments().getTorrentDuplicate() != null) {
 			return response.getArguments().getTorrentDuplicate().getId();
 		}
@@ -112,11 +117,13 @@ public class TransmissionClient {
 		retrofit2.Response<TransmissionResponse> response = service.sendRequest(request).execute();
 		return response.body();
 	}
-	
+
 	private String authorizationHeader = null;
 	private String xTransmissionSessionIdHeader = null;
 	
 	private void init() throws IOException {
+
+		ready = false;
 		
 		if (username != null && password != null) {
 			String loginAndPassword = username + ":" + password;
@@ -163,6 +170,8 @@ public class TransmissionClient {
 		retrofit2.Response<Void> response = service.init().execute();
 		if (!response.isSuccessful() && !(response.code() == 409)) {
 			throw new IOException( response.message() );
+		} else {
+			ready = true;
 		}
 
 	}	
